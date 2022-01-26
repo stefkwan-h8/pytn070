@@ -1,0 +1,35 @@
+Menggunakan github repository
+
+1. download git bash di https://git-scm.com/downloads
+2. install git bash
+3. ke https://github.com/ buat account baru dengan pilih sign up dan isi email + password
+4. login ke https://github.com/
+5. klik tombol hijau di daerah kiri atas untuk membuat Repo baru
+6. beri nama repo sesuai nama projek
+7. kita akan mulai connect folder local kita di pc, dengan folder online di github repo tadi
+
+connecting:
+1. buat git bash
+2. buka repo nya yang di github tadi, 
+    - klik tombol hijau CODE yang ada dan 
+    - copy link HTTPS yang diberikan, contohnya https://github.com/stefkwan-h8/PYTN070.git
+3. balik ke git bash, pergi ke folder lokal kita via git bash
+    - gunakan ls untuk melihat ada folder dan file apa saja di lokasi yang sekarang
+    - gunakan cd nama_folder untuk pindah ke dalam folder tersebut
+4. di git bash di folder yang akan dikoneksikan:
+    - git init
+    - git remote add origin https://github.com/stefkwan-h8/PYTN070.git
+    - folder lokal dan online sudah ke connect
+    
+kirim file dari folder lokal ke folder github "push":
+5. masih di git bash di folder yang terkoneksi tadi:
+    - git add .
+    - git commit -m "apa yang akan dikirim, komentar pendek bebas disini"
+    - git push --set-upstream origin main
+6. kalau bukan push yang pertama kali, bisa tulis "git push" saja tanpa --set-upstream origin master nya
+7. kalau pertama kali biasanya dia akan minta user email dan password github nya
+
+tarik file dari folder online ke lokal gunakan "pull":
+8. masih di git bash di folder yang terkoneksi tadi:
+    - git pull origin main
+    - atau "git pull" saja juga bisa
